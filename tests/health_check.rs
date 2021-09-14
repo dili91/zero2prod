@@ -26,7 +26,7 @@ async fn subscribe_returns_a_200_for_valid_form_data() {
     // Act
     let response = client
         .post(&format!("{}/subscriptions", address))
-        .header("Content-Type", "application/x-www-form-urlenconded")
+        .header("Content-Type", "application/x-www-form-urlencoded")
         .body(body)
         .send()
         .await
